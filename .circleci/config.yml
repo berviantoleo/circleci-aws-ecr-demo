@@ -7,3 +7,4 @@ workflows:
       - aws-ecr/build-and-push-image:
           context: dev
           public-registry: true
+          repo: dotnet-demo-berv
