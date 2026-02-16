@@ -5,7 +5,7 @@ RUN dotnet restore
 RUN dotnet build -c Release --no-restore
 RUN dotnet publish -c Release --no-restore --no-build -o publish
 
-FROM mcr.microsoft.com/dotnet/aspnet:10.0.2 as runtime
+FROM mcr.microsoft.com/dotnet/aspnet:10.0.3 as runtime
 WORKDIR /app
 COPY --from=build /app/publish /app
 CMD [ "dotnet", "CircleCIDemo.dll" ]
