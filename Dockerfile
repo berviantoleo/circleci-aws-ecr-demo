@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/sdk:10.0.302 as build
+FROM mcr.microsoft.com/dotnet/sdk:10.0.402 as build
 WORKDIR /app
 COPY . .
 RUN dotnet restore
